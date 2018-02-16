@@ -14,22 +14,22 @@ _This is the Epicodus weekly project for week 2 of the C# course. Its purpose is
 
 ### Specifications
 
-* Take in word and verify that the word is not an empty string.
+* Take in a word and verify that the word is not an empty string.
   * sample input: ""
   * sample output: false
-* Take in string and verify that the string is not an empty string.
+* Take in a string and verify that the string is not an empty string.
   * sample input: ""
   * sample output: false
 * Take in a word and a string and output the number of times that the given word appears in the given string.
   * sample input : "the", "the girl likes the food"
   * sample output : 2
-* The search feature should be case insensitive.
+* The search feature is case insensitive.
   * sample input : "the", "The girl likes the food"
   * sample output : 2
-* The search feature should strip away punctuation.
+* The search feature strips away punctuation.
   * sample input : "food", "The girl likes the food."
   * sample output : 1
-* The search feature will check for full word matches only.
+* The search feature checks for full word matches only.
   * sample input : "the", "The girl likes the theater."
   * sample output : 2
 
@@ -66,6 +66,7 @@ _To suggest changes, submit a pull request in the GitHub repository._
 ## Technologies Used
 
 * HTML
+* Bootstrap
 * C#
 * .Net Core 1.1
 
