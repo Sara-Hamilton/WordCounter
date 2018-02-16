@@ -66,7 +66,7 @@ namespace WordCounter.Models
       string[] stringArray = inputString.Split();
       foreach(string word in stringArray)
       {
-        if (word == inputWord)
+        if (word.ToLower() == inputWord.ToLower())
         {
           counter++;
         }

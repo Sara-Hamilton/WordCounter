@@ -53,5 +53,16 @@ namespace WordCounter.Tests
         //assert
         Assert.AreEqual(2, result);
       }
+
+      [TestMethod]
+      public void WordCount_ReturnWordCountCaseInsensitive_Int()
+      {
+        //arrange
+        RepeatCounter newRepeatCounter = new RepeatCounter("the", "the girl likes the food");
+        //action
+        int result = newRepeatCounter.WordCount("the", "The girl likes the food");
+        //assert
+        Assert.AreEqual(1, result);
+      }
   }
 }
