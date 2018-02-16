@@ -19,7 +19,7 @@ namespace WordCounter.Controllers
       string inputWord = Request.Form["input-word"];
       string inputString = Request.Form["input-string"];
       RepeatCounter newRepeatCounter = new RepeatCounter(inputWord, inputString);
-      if (newRepeatCounter.GetInputWord() == "" || newRepeatCounter.GetInputString() == "")
+      if (!newRepeatCounter.WordIsValid() || !newRepeatCounter.StringIsValid())
       {
           string message = "Fill in all fields";
           return View("Index", message);
