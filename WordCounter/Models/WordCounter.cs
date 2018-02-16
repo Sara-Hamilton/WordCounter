@@ -60,5 +60,19 @@ namespace WordCounter.Models
       }
     }
 
+    public int WordCount(string inputWord, string inputString)
+    {
+      int counter = 0;
+      string[] stringArray = inputString.Split();
+      foreach(string word in stringArray)
+      {
+        if (word == inputWord)
+        {
+          counter++;
+        }
+      }
+      return counter;
+    }
+
   }
 }

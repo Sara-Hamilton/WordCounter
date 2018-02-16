@@ -42,5 +42,16 @@ namespace WordCounter.Tests
         //assert
         Assert.AreEqual("the girl likes the food", resultString);
       }
+
+      [TestMethod]
+      public void WordCount_ReturnWordCount_Int()
+      {
+        //arrange
+        RepeatCounter newRepeatCounter = new RepeatCounter("the", "the girl likes the food");
+        //action
+        int result = newRepeatCounter.WordCount("the", "the girl likes the food");
+        //assert
+        Assert.AreEqual(1, result);
+      }
   }
 }
