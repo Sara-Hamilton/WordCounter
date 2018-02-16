@@ -7,20 +7,12 @@
   <div class="form-group">
     <label for="input-word">Word: </label>
     <input class="form-control" type="text" name="input-word">
+    <div class="error">@Html.Raw(@Model)</div>
   </div>
   <div class="form-group">
     <label for="input-string">Phrase: </label>
     <input class="form-control" type="text" name="input-string">
+    <div class="error">@Html.Raw(@Model)</div>
   </div>
   <button type="submit" class="btn btn-primary" name="button">Submit</button>
 </form>
-
-
-
-@if (@Model.GetInputWord() != "")
-{
-<div class="resultContainer">
-  <h2>The word "@Model.GetInputWord()" is in the following phrase @Model.WordCount() times.</h2>
-  <h2>Phrase: @Model.GetInputString()</h2>
-</div>
-}

@@ -10,8 +10,7 @@ namespace WordCounter.Controllers
     [HttpGet("/")]
     public ActionResult Index()
     {
-      RepeatCounter newRepeatCounter = new RepeatCounter("", "");
-      return View(newRepeatCounter);
+      return View();
     }
 
     [HttpPost("/")]
@@ -20,7 +19,15 @@ namespace WordCounter.Controllers
       string inputWord = Request.Form["input-word"];
       string inputString = Request.Form["input-string"];
       RepeatCounter newRepeatCounter = new RepeatCounter(inputWord, inputString);
-      return View("Index", newRepeatCounter);
+      if (newRepeatCounter.GetInputWord() == "" || newRepeatCounter.GetInputString() == "")
+      {
+          string message = "Fill in all fields";
+          return View("Index", message);
+      }
+      else
+      {
+        return View("Result", newRepeatCounter);
+      }
     }
 
   }
