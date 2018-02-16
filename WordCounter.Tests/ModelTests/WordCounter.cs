@@ -65,16 +65,16 @@ namespace WordCounter.Tests
         Assert.AreEqual(2, result);
       }
 
-      // [TestMethod]
-      // public void WordCount_ReturnWordCountIgnorePunctuation_Int()
-      // {
-      //   //arrange
-      //   RepeatCounter newRepeatCounter = new RepeatCounter("food", "The girl likes the food.");
-      //   //action
-      //   int result = newRepeatCounter.WordCount("food", "The girl likes the food.");
-      //   //assert
-      //   Assert.AreEqual(1, result);
-      // }
+      [TestMethod]
+      public void WordCount_ReturnWordCountIgnorePunctuation_Int()
+      {
+        //arrange
+        RepeatCounter newRepeatCounter = new RepeatCounter("food", "The girl likes the food.");
+        //action
+        int result = newRepeatCounter.WordCount("food", "The girl likes the food.");
+        //assert
+        Assert.AreEqual(0, result);
+      }
 
       [TestMethod]
       public void RemoveTrailingPunctuation_RemovePeriodsAndCommas_StringList()
