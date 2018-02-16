@@ -49,7 +49,7 @@ namespace WordCounter.Tests
         //arrange
         RepeatCounter newRepeatCounter = new RepeatCounter("the", "the girl likes the food");
         //action
-        int result = newRepeatCounter.WordCount("the", "the girl likes the food");
+        int result = newRepeatCounter.WordCount();
         //assert
         Assert.AreEqual(2, result);
       }
@@ -60,7 +60,7 @@ namespace WordCounter.Tests
         //arrange
         RepeatCounter newRepeatCounter = new RepeatCounter("the", "The girl likes the food");
         //action
-        int result = newRepeatCounter.WordCount("the", "The girl likes the food");
+        int result = newRepeatCounter.WordCount();
         //assert
         Assert.AreEqual(2, result);
       }
@@ -71,7 +71,7 @@ namespace WordCounter.Tests
         //arrange
         RepeatCounter newRepeatCounter = new RepeatCounter("food", "The girl likes the food.");
         //action
-        int result = newRepeatCounter.WordCount("food", "The girl likes the food.");
+        int result = newRepeatCounter.WordCount();
         //assert
         Assert.AreEqual(1, result);
       }
@@ -87,5 +87,16 @@ namespace WordCounter.Tests
           //assert
           CollectionAssert.AreEqual(comparisonResult, result);
       }
+
+      // [TestMethod]
+      // public void NoFunctionNeeded_FullMatchesOnly_Int()
+      // {
+      //   //arrange
+      //   RepeatCounter newRepeatCounter = new RepeatCounter("the", "The girl likes the theater.");
+      //   //action
+      //   int result = newRepeatCounter.WordCount();
+      //   //assert
+      //   Assert.AreEqual(3, result);
+      // }
   }
 }

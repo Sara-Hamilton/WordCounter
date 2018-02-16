@@ -60,13 +60,13 @@ namespace WordCounter.Models
       }
     }
 
-    public int WordCount(string inputWord, string inputString)
+    public int WordCount()
     {
       int counter = 0;
       List<string> stringList = RemoveTrailingPunctuation();
       foreach(string word in stringList)
       {
-        if (word.ToLower() == inputWord.ToLower())
+        if (word.ToLower() == _inputWord.ToLower())
         {
           counter++;
         }
