@@ -89,14 +89,14 @@ namespace WordCounter.Tests
       }
 
       [TestMethod]
-      public void NoAdditionalFunctionNeeded_FullMatchesOnly_Int()
+      public void NoAdditionalFunctionNeeded_FullWordMatchesOnly_Int()
       {
         //arrange
         RepeatCounter newRepeatCounter = new RepeatCounter("the", "The girl likes the theater.");
         //action
         int result = newRepeatCounter.WordCount();
         //assert
-        Assert.AreEqual(3, result);
+        Assert.AreEqual(2, result);
       }
   }
 }
