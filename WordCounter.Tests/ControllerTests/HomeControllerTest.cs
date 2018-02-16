@@ -18,7 +18,7 @@ namespace WordCounter.Tests
       IActionResult indexView = controller.Index();
       ViewResult result = indexView as ViewResult;
       //assert
-      Assert.IsInstanceOfType(result, typeof(ViewResult));
+      Assert.IsInstanceOfType(result, typeof(string));
     }
 
     [TestMethod]
