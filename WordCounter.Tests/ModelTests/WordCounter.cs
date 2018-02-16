@@ -58,11 +58,34 @@ namespace WordCounter.Tests
       public void WordCount_ReturnWordCountCaseInsensitive_Int()
       {
         //arrange
-        RepeatCounter newRepeatCounter = new RepeatCounter("the", "the girl likes the food");
+        RepeatCounter newRepeatCounter = new RepeatCounter("the", "The girl likes the food");
         //action
         int result = newRepeatCounter.WordCount("the", "The girl likes the food");
         //assert
         Assert.AreEqual(2, result);
+      }
+
+      // [TestMethod]
+      // public void WordCount_ReturnWordCountIgnorePunctuation_Int()
+      // {
+      //   //arrange
+      //   RepeatCounter newRepeatCounter = new RepeatCounter("food", "The girl likes the food.");
+      //   //action
+      //   int result = newRepeatCounter.WordCount("food", "The girl likes the food.");
+      //   //assert
+      //   Assert.AreEqual(1, result);
+      // }
+
+      [TestMethod]
+      public void RemoveTrailingPunctuation_RemovePeriodsAndCommas_StringList()
+      {
+          //arrange
+          RepeatCounter newRepeatCounter = new RepeatCounter("food", "The girl likes the food.");
+          //action
+          List<string> result = newRepeatCounter.RemoveTrailingPunctuation("The girl likes the food.");
+          List<string> comparisonResult = new List<string>(){"The","girl","likes","the","food."};
+          //assert
+          CollectionAssert.AreEqual(comparisonResult, result);
       }
   }
 }

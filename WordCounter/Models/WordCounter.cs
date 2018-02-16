@@ -64,8 +64,10 @@ namespace WordCounter.Models
     {
       int counter = 0;
       string[] stringArray = inputString.Split();
+      // char[] charsToTrim = {',', '.'};
       foreach(string word in stringArray)
       {
+        // word = word.TrimEnd(charsToTrim);
         if (word.ToLower() == inputWord.ToLower())
         {
           counter++;
@@ -73,6 +75,19 @@ namespace WordCounter.Models
       }
       return counter;
     }
+
+    public List<string> RemoveTrailingPunctuation(string inputString)
+    {
+      string[] stringArray = inputString.Split();
+      char[] charsToTrim = {',', '.'};
+      List<string> newStringList = new List<string>();
+      foreach(string word in stringArray)
+      {
+        newStringList.Add(word.TrimEnd(charsToTrim));
+      }
+      return newStringList;
+    }
+
 
   }
 }
