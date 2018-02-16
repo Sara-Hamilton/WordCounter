@@ -36,7 +36,7 @@ namespace WordCounter.Models
       _inputString = inputString;
     }
 
-    public bool WordIsValid(string inputWord)
+    public bool WordIsValid()
     {
       if(_inputWord == "")
       {
@@ -48,7 +48,7 @@ namespace WordCounter.Models
       }
     }
 
-    public bool StringIsValid(string inputString)
+    public bool StringIsValid()
     {
       if(_inputString == "")
       {
@@ -76,9 +76,9 @@ namespace WordCounter.Models
       return counter;
     }
 
-    public List<string> RemoveTrailingPunctuation(string inputString)
+    public List<string> RemoveTrailingPunctuation()
     {
-      string[] stringArray = inputString.Split();
+      string[] stringArray = _inputString.Split();
       char[] charsToTrim = {',', '.'};
       List<string> newStringList = new List<string>();
       foreach(string word in stringArray)

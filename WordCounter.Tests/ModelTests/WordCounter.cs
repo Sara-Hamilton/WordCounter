@@ -82,7 +82,7 @@ namespace WordCounter.Tests
           //arrange
           RepeatCounter newRepeatCounter = new RepeatCounter("food", "The girl, likes the food.");
           //action
-          List<string> result = newRepeatCounter.RemoveTrailingPunctuation("The girl, likes the food.");
+          List<string> result = newRepeatCounter.RemoveTrailingPunctuation();
           List<string> comparisonResult = new List<string>(){"The","girl","likes","the","food"};
           //assert
           CollectionAssert.AreEqual(comparisonResult, result);
