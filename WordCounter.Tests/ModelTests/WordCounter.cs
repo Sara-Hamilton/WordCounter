@@ -88,15 +88,15 @@ namespace WordCounter.Tests
           CollectionAssert.AreEqual(comparisonResult, result);
       }
 
-      // [TestMethod]
-      // public void NoFunctionNeeded_FullMatchesOnly_Int()
-      // {
-      //   //arrange
-      //   RepeatCounter newRepeatCounter = new RepeatCounter("the", "The girl likes the theater.");
-      //   //action
-      //   int result = newRepeatCounter.WordCount();
-      //   //assert
-      //   Assert.AreEqual(3, result);
-      // }
+      [TestMethod]
+      public void NoAdditionalFunctionNeeded_FullMatchesOnly_Int()
+      {
+        //arrange
+        RepeatCounter newRepeatCounter = new RepeatCounter("the", "The girl likes the theater.");
+        //action
+        int result = newRepeatCounter.WordCount();
+        //assert
+        Assert.AreEqual(3, result);
+      }
   }
 }
