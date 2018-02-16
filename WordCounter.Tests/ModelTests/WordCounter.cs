@@ -29,7 +29,7 @@ namespace WordCounter.Tests
         //action
         string resultWord = newRepeatCounter.GetInputWord();
         //assert
-        Assert.AreEqual("the", resultWord);
+        Assert.AreEqual("", resultWord);
       }
   }
 }
