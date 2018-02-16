@@ -20,5 +20,16 @@ namespace WordCounter.Tests
         Assert.AreEqual("the", resultWord);
         Assert.AreEqual("the girl likes the food", resultString);
       }
+
+      [TestMethod]
+      public void WordIsValid_InputWordNotEmptyString_False()
+      {
+        //arrange
+        RepeatCounter newRepeatCounter = new RepeatCounter("", "the girl likes the food");
+        //action
+        string resultWord = newRepeatCounter.GetInputWord();
+        //assert
+        Assert.AreEqual("the", resultWord);
+      }
   }
 }
