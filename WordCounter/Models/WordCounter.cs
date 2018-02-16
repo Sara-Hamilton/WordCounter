@@ -48,5 +48,17 @@ namespace WordCounter.Models
       }
     }
 
+    public bool StringIsValid(string inputString)
+    {
+      if(_inputString == "")
+      {
+        return false;
+      }
+        else
+      {
+        return true;
+      }
+    }
+
   }
 }

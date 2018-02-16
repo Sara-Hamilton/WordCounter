@@ -31,5 +31,16 @@ namespace WordCounter.Tests
         //assert
         Assert.AreEqual("", resultWord);
       }
+
+      [TestMethod]
+      public void StringIsValid_InputStringNotEmptyString_True()
+      {
+        //arrange
+        RepeatCounter newRepeatCounter = new RepeatCounter("the", "the girl likes the food");
+        //action
+        string resultString = newRepeatCounter.GetInputString();
+        //assert
+        Assert.AreEqual("", resultString);
+      }
   }
 }
