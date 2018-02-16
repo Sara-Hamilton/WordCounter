@@ -77,12 +77,12 @@ namespace WordCounter.Tests
       }
 
       [TestMethod]
-      public void RemoveTrailingPunctuation_RemovePeriodsAndCommas_StringList()
+      public void RemovePunctuation_RemovePunctuation_StringList()
       {
           //arrange
           RepeatCounter newRepeatCounter = new RepeatCounter("food", "The girl, likes the food.");
           //action
-          List<string> result = newRepeatCounter.RemoveTrailingPunctuation();
+          List<string> result = newRepeatCounter.RemovePunctuation();
           List<string> comparisonResult = new List<string>(){"The","girl","likes","the","food"};
           //assert
           CollectionAssert.AreEqual(comparisonResult, result);
