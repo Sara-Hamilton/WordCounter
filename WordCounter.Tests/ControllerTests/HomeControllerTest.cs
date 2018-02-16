@@ -21,15 +21,16 @@ namespace WordCounter.Tests
       Assert.IsInstanceOfType(result, typeof(ViewResult));
     }
 
-    [TestMethod]
-    public void Index_HasCorrectModelType_RepeatCounter()
-    {
-      //arrange
-      ViewResult indexView = new HomeController().Index() as ViewResult;
-      //act
-      var result = indexView.ViewData.Model;
-      //assert
-      Assert.IsInstanceOfType(result, typeof(RepeatCounter));
-    }
+    // Test is mo longer valid after Index was refactored to no longer pass anything into the model
+    // [TestMethod]
+    // public void Index_HasCorrectModelType_RepeatCounter()
+    // {
+    //   //arrange
+    //   ViewResult indexView = new HomeController().Index() as ViewResult;
+    //   //act
+    //   var result = indexView.ViewData.Model;
+    //   //assert
+    //   Assert.IsInstanceOfType(result, typeof(RepeatCounter));
+    // }
   }
 }
