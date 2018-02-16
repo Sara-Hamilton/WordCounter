@@ -63,11 +63,9 @@ namespace WordCounter.Models
     public int WordCount(string inputWord, string inputString)
     {
       int counter = 0;
-      string[] stringArray = inputString.Split();
-      // char[] charsToTrim = {',', '.'};
-      foreach(string word in stringArray)
+      List<string> stringList = RemoveTrailingPunctuation();
+      foreach(string word in stringList)
       {
-        // word = word.TrimEnd(charsToTrim);
         if (word.ToLower() == inputWord.ToLower())
         {
           counter++;
