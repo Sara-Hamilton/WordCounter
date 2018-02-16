@@ -40,7 +40,7 @@ namespace WordCounter.Tests
         //action
         string resultString = newRepeatCounter.GetInputString();
         //assert
-        Assert.AreEqual("", resultString);
+        Assert.AreEqual("the girl likes the food", resultString);
       }
   }
 }
