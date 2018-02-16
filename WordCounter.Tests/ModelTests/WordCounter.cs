@@ -17,8 +17,8 @@ namespace WordCounter.Tests
         string resultWord = newRepeatCounter.GetInputWord();
         string resultString = newRepeatCounter.GetInputString();
         //assert
-        Assert.AreEqual("they", resultWord);
-        Assert.AreEqual("girl likes the food", resultString);
+        Assert.AreEqual("the", resultWord);
+        Assert.AreEqual("the girl likes the food", resultString);
       }
   }
 }
