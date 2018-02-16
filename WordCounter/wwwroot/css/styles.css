@@ -1,8 +1,80 @@
 .jumbotron {
   text-align: center;
+  background-color: #071E22;
+  color: #679289;
 }
 
 .error {
   color: red;
   font-style: bold;
+}
+
+body {
+  background-color: #5B5B46;
+}
+
+h1, .centered {
+  text-align: center;
+}
+
+a {
+  color: #679289;
+}
+
+.btn-primary {
+  color: #071E22;
+  background-color: #679289;
+  border-color: #2e6da4;
+}
+.btn-primary:focus,
+.btn-primary.focus {
+  color: #071E22;
+  background-color: #BFFFF1;
+  border-color: #122b40;
+}
+.btn-primary:hover {
+  color: #071E22;
+  background-color: #BFFFF1;
+  border-color: #204d74;
+}
+.btn-primary:active,
+.btn-primary.active,
+.open > .dropdown-toggle.btn-primary {
+  color: #071E22;
+  background-color: #BFFFF1;
+  border-color: #204d74;
+}
+.btn-primary:active:hover,
+.btn-primary.active:hover,
+.open > .dropdown-toggle.btn-primary:hover,
+.btn-primary:active:focus,
+.btn-primary.active:focus,
+.open > .dropdown-toggle.btn-primary:focus,
+.btn-primary:active.focus,
+.btn-primary.active.focus,
+.open > .dropdown-toggle.btn-primary.focus {
+  color: #071E22;
+  background-color: #BFFFF1;
+  border-color: #122b40;
+}
+.btn-primary:active,
+.btn-primary.active,
+.open > .dropdown-toggle.btn-primary {
+  background-image: none;
+}
+.btn-primary.disabled:hover,
+.btn-primary[disabled]:hover,
+fieldset[disabled] .btn-primary:hover,
+.btn-primary.disabled:focus,
+.btn-primary[disabled]:focus,
+fieldset[disabled] .btn-primary:focus,
+.btn-primary.disabled.focus,
+.btn-primary[disabled].focus,
+fieldset[disabled] .btn-primary.focus {
+  background-color: #679289;
+  border-color: #2e6da4;
+}
+.btn-primary .badge {
+  color: #679289;
+  background-color: #071E22;
 }
