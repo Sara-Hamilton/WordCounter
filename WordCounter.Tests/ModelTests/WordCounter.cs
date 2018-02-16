@@ -73,7 +73,7 @@ namespace WordCounter.Tests
         //action
         int result = newRepeatCounter.WordCount("food", "The girl likes the food.");
         //assert
-        Assert.AreEqual(0, result);
+        Assert.AreEqual(1, result);
       }
 
       [TestMethod]
