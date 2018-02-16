@@ -77,15 +77,14 @@ namespace WordCounter.Models
     public List<string> RemoveTrailingPunctuation()
     {
       string[] stringArray = _inputString.Split();
-      char[] charsToTrim = {',', '.'};
+      char[] charsToTrim = {',', '.','!','?',':',';','@','%','&','(',')','{','}','[',']','/','*','<','>'};
       List<string> newStringList = new List<string>();
       foreach(string word in stringArray)
       {
-        newStringList.Add(word.TrimEnd(charsToTrim));
+        newStringList.Add(word.Trim(charsToTrim));
       }
       return newStringList;
     }
-
 
   }
 }
