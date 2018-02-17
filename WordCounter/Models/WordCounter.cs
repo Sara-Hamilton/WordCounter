@@ -77,7 +77,7 @@ namespace WordCounter.Models
     public List<string> RemovePunctuation()
     {
       string[] stringArray = _inputString.Split();
-      char[] charsToTrim = {',', '.','!','?',':',';','@','%','&','(',')','{','}','[',']','/','*','<','>'};
+      char[] charsToTrim = {',', '.','!','?',':',';','@','%','&','(',')','{','}','[',']','/','\\','*','<','>'};
       List<string> newStringList = new List<string>();
       foreach(string word in stringArray)
       {
