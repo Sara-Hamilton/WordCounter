@@ -27,9 +27,9 @@ namespace WordCounter.Tests
         //arrange
         RepeatCounter newRepeatCounter = new RepeatCounter("", "the girl likes the food");
         //action
-        string resultWord = newRepeatCounter.GetInputWord();
+        bool result = newRepeatCounter.WordIsValid();
         //assert
-        Assert.AreEqual("", resultWord);
+        Assert.AreEqual(false, result);
       }
 
       [TestMethod]
@@ -38,9 +38,9 @@ namespace WordCounter.Tests
         //arrange
         RepeatCounter newRepeatCounter = new RepeatCounter("the", "the girl likes the food");
         //action
-        string resultString = newRepeatCounter.GetInputString();
+        bool result = newRepeatCounter.StringIsValid();
         //assert
-        Assert.AreEqual("the girl likes the food", resultString);
+        Assert.AreEqual(true, result);
       }
 
       [TestMethod]
