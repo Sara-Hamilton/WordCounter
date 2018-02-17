@@ -12,7 +12,7 @@ namespace WordCounter.Models
 
     public RepeatCounter(string inputWord, string inputString)
     {
-      _inputWord = inputWord;
+      _inputWord = inputWord.Trim();
       _inputString = inputString;
     }
 
