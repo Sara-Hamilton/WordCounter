@@ -21,8 +21,8 @@ namespace WordCounter.Controllers
       RepeatCounter newRepeatCounter = new RepeatCounter(inputWord, inputString);
       if (!newRepeatCounter.WordIsValid() || !newRepeatCounter.StringIsValid())
       {
-          string message = "Fill in all fields";
-          return View("Index", message);
+        string message = "Fill in all fields";
+        return View("Index", message);
       }
       else
       {
