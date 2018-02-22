@@ -6,7 +6,7 @@
 
 ## Description
 
-_This is the Epicodus weekly project for week 2 of the C# course. Its purpose is to display understanding .Net MVC testing in C#._
+_This is the Epicodus weekly project for week 2 of the C# course. Its purpose is to display understanding of .Net MVC testing in C#._
 
 #### _Word Counter_
 * Takes in a word and a string
